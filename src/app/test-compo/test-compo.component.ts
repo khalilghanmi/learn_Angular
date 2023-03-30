@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestCompoComponent implements OnInit {
  
+  displayim = true
+
+  aux=""
+  rest=""
+  imagechange="https://i.pinimg.com/236x/a0/a0/9b/a0a09b5570765af25a3336cb62032088.jpg"
+  hidenshow(){
+    this.aux=this.imagechange
+    this.imagechange=this.rest
+    this.rest=this.aux
+  }
   users={
     name:'Belgacem Jelliti',
     age: 82,

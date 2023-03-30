@@ -1,4 +1,5 @@
 <p>first works!</p>
+<p *ngIf=" display"> Hello Khalil Ghanmi</p>
 <h1>{{ name }}</h1>
 <h1>{{ age }}</h1>
 <h2>{{ inpout_text }}</h2><br>
@@ -8,5 +9,6 @@
 <br>
 <input type="text" [(ngModel)]="inpout_text" name="champ" >
 <br>
+
 <img src="{{ linkimageurldirect }}" width="500" [alt]="alternative">
 <img [src]=" linkimageurl " width="500">

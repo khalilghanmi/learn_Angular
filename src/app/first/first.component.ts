@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit {
-
+  display = true
 name='amel jelliti'
 age = 61
 linkimageurl ="https://khalilghanmi.com/wp-content/uploads/2021/12/Khalil-Ghanmi.png"

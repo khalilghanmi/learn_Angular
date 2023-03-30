@@ -1,5 +1,9 @@
 <p>test-compo works!</p>
-
+<img [src]="imagechange">
+<button (click)=" hidenshow() "> Hiden and show </button>
+<p>La 2éme Version </p>
+<img *ngIf=" displayim" [src]="imagechange">
+<button (click)=" displayim =!displayim "> Hiden and show version 2 </button>
 <h3>{{ users.name }}</h3>
 <h3>{{ users.age }}</h3>
 <img [src]=" users.image " width="500px" >
