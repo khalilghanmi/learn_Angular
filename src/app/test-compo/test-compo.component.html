@@ -1,4 +1,49 @@
 <p>test-compo works!</p>
+<h1>{{ cars[0] }}</h1>
+<h1>{{ cars[1] }}</h1>
+<h1>{{ cars[2] }}</h1>
+<div *ngFor="let item of student" [ngClass]="{ 'bg-danger': item.age <18 , 'bg-succes': item.age >18 }">
+    <h2 > {{ item.name }}</h2>
+    <h4 > {{ item.age }}</h4>
+</div>
+
+<h2 *ngFor="let item of cars"> {{ item }}</h2>
+<div *ngFor="let item of student">
+    <h2 > {{ item.name }}</h2>
+    <h4 > {{ item.age }}</h4>
+</div>
+<div *ngFor="let item of student">
+    <div *ngIf=" item.age >18 ">
+        <h2 > {{ item.name }}</h2>
+        <h4 > {{ item.age }}</h4>  
+    </div>
+    
+</div>
+<div *ngFor="let item of student">
+    <ng-container *ngIf=" item.age >18 ">
+        <h2 > {{ item.name }}</h2>
+        <h4 > {{ item.age }}</h4>  
+    </ng-container>
+    
+</div>
+<!-- <h2 *ngFor="let item of student"> {{ item.name }}</h2>
+<h2 *ngFor="let item of student"> {{ item.age }}</h2> -->
+<h1> Les Couleurs</h1>
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'">couleur est un red</p>
+    <p *ngSwitchCase="'green'">couleur est un green</p>
+    <p *ngSwitchCase="'blue'">couleur est un blue</p>
+    <p *ngSwitchCase="'yellow'">couleur est un yellow</p>
+</div>
+<br>
+<input type="text" [(ngModel)]=" color " >
+<br>
+
+
+<div [ngStyle]=" {'background-color': users.bg, 'color': users.color} ">
+    <p [ngStyle]=" {'color': users.color}">{{ users.name }}</p>
+    <p>{{ users.age }}</p>
+</div>
 <img [src]="imagechange">
 <button (click)=" hidenshow() "> Hiden and show </button>
 <p>La 2éme Version </p>
@@ -7,6 +52,7 @@
 <h3>{{ users.name }}</h3>
 <h3>{{ users.age }}</h3>
 <img [src]=" users.image " width="500px" >
+<h2>{{ changenames }}</h2>
 <input type="text" [(ngModel)]=" changenames" >
 <button (click)=" changename() "> change name </button>
 <input type="text" [(ngModel)]=" changenames" >

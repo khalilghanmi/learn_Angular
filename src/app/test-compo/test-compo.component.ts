@@ -7,6 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestCompoComponent implements OnInit {
  
+  color ='red'
+  student =[
+    {
+      name:'khalil ghanmi',
+      age: 29
+    },
+    {
+      name:'hatem ben ammar',
+      age: 28
+    },
+    {
+      name:'omar dahmouch',
+      age: 14
+    },
+    {
+      name:'haythem gargouri',
+      age: 29
+    },
+    {
+      name:'ammer beb khadhra',
+      age: 15
+    },
+
+  ]
+   
   displayim = true
 
   aux=""
@@ -20,8 +45,18 @@ export class TestCompoComponent implements OnInit {
   users={
     name:'Belgacem Jelliti',
     age: 82,
-    image: 'https://khalilghanmi.com/wp-content/uploads/2022/04/logo-khalil-ghanmi-finale-blanc.svg' 
+    image: 'https://khalilghanmi.com/wp-content/uploads/2022/04/logo-khalil-ghanmi-finale-blanc.svg', 
+    color: 'red',
+    bg: 'blue',
+  
   }
+  cars=[
+    'bmw',
+    'toyota',
+    'rang rover'
+  ]
+    
+  
   changenames ='' 
   changename(){
     this.users.name = this.changenames
