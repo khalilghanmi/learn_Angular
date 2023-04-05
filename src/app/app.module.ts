@@ -7,13 +7,17 @@ import { TestCompoComponent } from './test-compo/test-compo.component';
 import { FirstComponent } from './first/first.component';
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
+import { AjoutComponent } from './ajout/ajout.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestCompoComponent,
     FirstComponent,
-    CardComponent
+    CardComponent,
+    AjoutComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

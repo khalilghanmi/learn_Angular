@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 class="text-center mt5 text-light"> Hero app</h1>
+    <div class="row">
+        <div class="col-3">
+            <input type="text" [(ngModel)]="hero.name_persone" class="form-control m-1" placeholder="name">
+        </div>
+        <div class="col-3">
+            <input type="text" [(ngModel)]="hero.age" class="form-control m-1" placeholder="power">
+        </div>
+        <div class="col-3">
+            <input type="text" [(ngModel)]="hero.image_url" class="form-control m-1" placeholder="image url">
+        </div>
+        <div class="col-3">
+            <button type="submit" (click)="ajouter()" class="btn btn-primary form-control m-1"> Create</button>
+        </div>
+    
+    </div>
+</div>
