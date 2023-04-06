@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-3" *ngFor="let item of heros">
+    <div class="col-3" *ngFor="let item of _shared.heros">
     <div class="card" [ngClass]="{'faible':item.age <100 , 'medium':item.age>=100 && item.age<500 ,'haut':item.age>=500}">
         <div class="card-image">
             <img [src]="item.image_url" width="100%" height="100%">
