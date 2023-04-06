@@ -11,6 +11,7 @@ import { AjoutComponent } from './ajout/ajout.component';
 import { ListComponent } from './list/list.component';
 import { NevbarComponent } from './nevbar/nevbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
