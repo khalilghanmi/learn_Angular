@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { AjoutComponent } from './ajout/ajout.component';
 import { ListComponent } from './list/list.component';
+import { NevbarComponent } from './nevbar/nevbar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ListComponent } from './list/list.component';
     FirstComponent,
     CardComponent,
     AjoutComponent,
-    ListComponent
+    ListComponent,
+    NevbarComponent
   ],
   imports: [
     BrowserModule,
