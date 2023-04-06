@@ -10,6 +10,7 @@ import { CardComponent } from './card/card.component';
 import { AjoutComponent } from './ajout/ajout.component';
 import { ListComponent } from './list/list.component';
 import { NevbarComponent } from './nevbar/nevbar.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,13 @@ import { NevbarComponent } from './nevbar/nevbar.component';
     CardComponent,
     AjoutComponent,
     ListComponent,
-    NevbarComponent
+    NevbarComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
