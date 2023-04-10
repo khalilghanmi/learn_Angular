@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <!-- <form  #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)"> -->
+      <form [formGroup]="emailForm"> 
+      <div class="mb-3">
+          <label class="form-label">first name </label>
+          <input type="text"  name="firstname" #firstname="ngModel" ngModel  class="form-control" required>
+          <p *ngIf="firstname.errors?.['required'] && firstname.touched">this input first name is required </p>
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Last name</label>
+          <input type="text" required name="lastname" #lastname="ngModel" ngModel class="form-control" >
+          <p *ngIf="lastname.errors?.['required'] && lastname.touched">this input last name is required </p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">email </label>
+          
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Password</label>
+          <input type="password" required name="password" #password="ngModel" ngModel class="form-control" >
+          <p *ngIf="password.errors?.['required'] && password.touched">this input password is required </p>
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+<p>-----------------------------------------------</p>
+<form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Email:</label>
+    <input type="email" name="email" formControlName="email">
+    <div *ngIf="emailForm.get('email').invalid && (emailForm.get('email').dirty || emailForm.get('email').touched)">
+      <div *ngIf="emailForm.get('email').errors.required">
+        Email is required.
+      </div>
+      <div *ngIf="emailForm.get('email').errors.email">
+        Please enter a valid email address.
+      </div>
+    </div>
+  </div>
+  <button type="submit">Submit</button>
+</form>
