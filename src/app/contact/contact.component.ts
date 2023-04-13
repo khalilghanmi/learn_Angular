@@ -7,10 +7,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-//   onSubmit(itemForm: any){
-// console.log(itemForm.value)
-// // alert(itemForm.value.firstname)
-// }
+  onSubmit(itemForm: any){
+console.log(itemForm.value)
+alert(itemForm.value.firstname)
+}
 // emailControl = new FormControl('', [Validators.required, Validators.email]);
 
 //   onSubmit() {
