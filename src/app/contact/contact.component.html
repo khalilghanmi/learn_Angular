@@ -1,6 +1,6 @@
 <div class="container-fluid">
-    <!-- <form  #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)"> -->
-      <form [formGroup]="emailForm"> 
+    <form  #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+      <!-- <form [formGroup]="emailForm">  -->
       <div class="mb-3">
           <label class="form-label">first name </label>
           <input type="text"  name="firstname" #firstname="ngModel" ngModel  class="form-control" required>
@@ -12,8 +12,8 @@
           <p *ngIf="lastname.errors?.['required'] && lastname.touched">this input last name is required </p>
         </div>
         <div class="mb-3">
-          <label class="form-label">email </label>
-          
+          <label class="form-label">file </label>
+           
         </div>
         <div class="mb-3">
           <label  class="form-label">Password</label>
@@ -25,7 +25,22 @@
       </form>
 </div>
 <p>-----------------------------------------------</p>
-<form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+<div class="form-field" [style.background-image]="'url(' + imageUrl + ')'">
+  <input type="text" placeholder="Enter your name">
+</div>
+<form>
+  <div class="form-field" [style.background-image]="'url(' + imageUrl + ')'">
+    <input type="text" placeholder="Enter your name">
+  </div>
+  <div class="form-field">
+    <input type="file" (change)="onFileSelected($event)">
+  </div>
+  <div class="form-field"><br><br><br><br><br>
+    <input type="file" name="  selectedFile" (change)="onFileSelected($event)">
+  </div>
+  <button type="submit" (click)="uploadFile()">Submit</button>
+</form>
+<!-- <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
   <div>
     <label>Email:</label>
     <input type="email" name="email" formControlName="email">
@@ -39,4 +54,4 @@
     </div>
   </div>
   <button type="submit">Submit</button>
-</form>
+</form> -->

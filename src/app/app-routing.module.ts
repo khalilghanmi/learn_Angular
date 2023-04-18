@@ -5,6 +5,7 @@ import { ListComponent } from './list/list.component';
 import { CardComponent } from './card/card.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ContactComponent } from './contact/contact.component';
+import { InsertImageComponent } from './insert-image/insert-image.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'' , pathMatch: 'full'},
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'list' , component : ListComponent},
   { path: 'card', component : CardComponent},
   { path: 'contact', component : ContactComponent},
+  { path:'insert-images', component: InsertImageComponent},
 
   { path: '**', component : NotfoundComponent}
 ];

@@ -13,6 +13,7 @@ import { NevbarComponent } from './nevbar/nevbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './contact/contact.component';
+import { InsertImageComponent } from './insert-image/insert-image.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ContactComponent } from './contact/contact.component';
     NevbarComponent,
     NotfoundComponent,
     ContactComponent,
+    InsertImageComponent,
     
   ],
   imports: [
@@ -33,6 +35,7 @@ import { ContactComponent } from './contact/contact.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
